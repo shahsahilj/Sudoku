@@ -18,8 +18,3 @@ problem. In the recursion, it takes the smallest domain and assigns one value fr
 forward checks the arc consistency with this assignment. If it is consistent then a recursive call is made
 using that assignment. If the recursive call comes back positive, then the problem is solved, otherwise
 another value is assigned from the domain and tested in a similar way.
-
-
-3. sudokus.txt - It contains a set of sudoku puzzles. Each line has 81 digits and is an individual sudoku puzzle. The first 8 digits
-are the first row of the sudoku and the second 8 digits are the second row and so on. If a digit is 0, it means that
-the cell has no assigned value.
