@@ -19,7 +19,7 @@ def printSudoku(sudoku):
 
 # Reading of sudoku list from file
 try:
-    f = open("sudokus.txt", "r")
+    f = open("su.txt", "r")
     sudokuList = f.read()
 except:
         print "Error in reading the sudoku file."
