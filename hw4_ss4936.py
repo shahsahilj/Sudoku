@@ -19,7 +19,7 @@ def printSudoku(sudoku):
 
 # Reading of sudoku list from file
 try:
-    f = open("sudokus.txt", "r")
+    f = open("su.txt", "r")
     sudokuList = f.read()
 except:
         print "Error in reading the sudoku file."
@@ -30,6 +30,8 @@ num_ac3_solved = 0
 ac3solved_indexes = []
 num = 1
 for line in sudokuList.split("\n"):
+        if line == "":
+                continue
         # Parse sudokuList to individual sudoku in dict, e.g. sudoku["A2"] = 1
         sudoku = {ROW[i] + COL[j]: int(line[9*i+j]) for i in range(9) for j in range(9)}
         # write your AC3 algorithms here, update num_ac3_solved
@@ -42,6 +44,8 @@ t2 = time.time()
 # 1.6 solve all sudokus by backtracking
 num_bt_solved = 0
 for line in sudokuList.split("\n"):
+        if line == "":
+                continue
         # Parse sudokuList to individual sudoku in dict, e.g. sudoku["A2"] = 1
         sudoku = {ROW[i] + COL[j]: int(line[9*i+j]) for i in range(9) for j in range(9)}
         if backtrack.backtrack(sudoku):
